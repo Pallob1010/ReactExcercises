@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Object from './Object'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+  state= {
+        objects:[
+          {
+            name:'Bayezid' ,roll:123001, sub:'CSE'
+          },
+          {
+            name:'Forhad' ,roll:123002, sub:'CSE'
+          },
+          {
+            name:'Nasim' ,roll:123003, sub:'CSE'
+          },
+          {
+            name:'Pallob' ,roll:123004, sub:'CSE'
+          },
+          {
+            name:'Abdullah' ,roll:123005, sub:'CSE'
+          },
+          {
+            name:'Masum' ,roll:123006, sub:'CSE'
+          },
+          {
+            name:'Pavel' ,roll:123007, sub:'CSE'
+          }
+          
+        ]
+
+
+  }
+
+  render() {
+    return (
+      <div>
+        <Object objects={this.state.objects}/>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
